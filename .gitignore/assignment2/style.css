@@ -1,0 +1,358 @@
+/* Reset code */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+/*My code*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.main-wrapper{
+	margin: 0 auto;
+	width:1000px;
+}
+
+body{
+	background-color: #f4f8f6;
+	background-image: url("includes/resources/background/body-design.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-attachment: fixed;
+	font-family: '', sans-serif;
+	min-width: 1015px;
+}
+
+nav{
+	width: 100%;
+	height: 190px;
+}
+
+header {
+	height:240px;
+	min-width: 850px;
+}
+
+.top-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    clear: both;
+    background: #3a4f5a;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.logo{
+	float: left;
+	padding: 20px 10px 10px 70px;
+	margin-right: 50px;
+}
+
+ul {
+	text-align: center;
+}
+
+ul li{
+	list-style: none;
+	display:inline-block;
+	float:left;
+	line-height: 180px;
+}
+
+ul li a {
+	display:block;
+	text-decoration: none;
+	font-size: 25px;
+	color: #1e1e1e;
+	padding: 0px 50px 0px 50px;
+}
+
+.main-content h2 a {
+	text-decoration: none;
+	color: #82ad4b;
+	font-size: 24px;
+}
+
+#login{
+	float: right;
+	padding-right: 50px;
+	padding-top: 10px;
+	width: 500px;
+}
+
+#login h3 {
+	text-align: justify;
+}
+#login form{
+	margin-top: 30px;
+}
+
+#login form input{
+	float: left;
+	margin-top: 15px;
+	width: 140px;
+	height: 30px;
+	padding: 0px 10px;
+	margin-right: 10px;
+	background-color: #ccc;
+	font-family: '', sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+#login form button{
+	margin: 15px 0 15px 0;
+	padding: 5px 10px;
+	background-color: #82ad4b;
+	color: #fff;
+	border: none;
+	height: 34px;
+}
+#logout{
+	float: right;
+	padding-right: 50px;
+	padding-top: 80px;
+}
+
+#logout h3 {
+	text-align: justify;
+	font-size: 18px;
+}
+#logout form{
+
+}
+
+#logout form input{
+	float: left;
+	margin-top: 15px;
+	width: 140px;
+	height: 30px;
+	padding: 0px 10px;
+	margin-right: 10px;
+	background-color: #ccc;
+	font-family: '', sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+#logout form button{
+	margin: 15px 0 15px 50px;
+	padding: 5px 10px;
+	background-color: #82ad4b;
+	color: #fff;
+	border: none;
+	position: 
+}
+
+.title{
+	border-bottom: 1px solid #E1E1E1;
+    border-top: 1px solid #E1E1E1;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size:25px;
+    background-color: #fff;
+}
+
+.main-content {
+	text-align: center;
+	padding: 20px 50px 20px 50px;
+}
+
+.main-content h2 {
+	font-size: 26px;
+}
+
+#sign-up-content h3 {
+	font-size: 24px;
+}
+
+#sign-up-content p {
+	font-size: 18px;
+}
+
+
+#sign-up-content h4{
+	font-size: 18px;
+	font-weight: normal;
+}
+
+#sign-up-content input{
+	margin-top: 15px;
+	width: 140px;
+	height: 30px;
+	padding: 0px 10px;
+	margin-right: 10px;
+	font-family: '', sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+#sign-up-content button{
+	padding: 7px 10px 10px 10px;
+	height: 34px;
+	position: absolute;
+	margin-top: 15px;
+}
+
+#menu-items{
+	display: inline-block;
+	float: left;
+	text-align: left;
+	width: 100%;
+}
+
+#menu-items h1{
+	padding-bottom: 15px;
+	color: red;
+	font-size: 22px;
+}
+
+.food {
+	float: left;
+	width: 25%;
+}
+
+.food-name {
+	font-size: 18px;
+}
+
+.food-description {
+	font-style: italic;
+}
+
+.name {
+	font-size:18px;
+	padding-bottom: 15px;
+}
+
+.description {
+	font-style: italic;
+}
+
+/* Not working */
+.menu-active {
+	color: orange;
+}
+
+#homepage-image {
+	bottom: 100px;
+	position: absolute;
+	width: 100%;
+}
+
+#checkout-button h3 {
+	
+}
+
+footer {
+	border-top: 1px solid #E1E1E1;
+	padding-top: 50px;
+	/*Taken from https://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page*/
+	position:absolute;
+  	bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    background-color: #fff;
+}
+
+footer p {
+	padding-left: 50px;
+	text-align: center;
+}
+
+#staff-page p {
+	text-align: justify;
+}

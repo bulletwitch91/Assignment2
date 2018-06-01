@@ -64,7 +64,11 @@
 		</div>
 	</div>
 	<div id="checkout-button">
-		<h3>Checkout</h3>
+		<form action="">
+			<button type="submit" name="checkout"> 
+				checkout
+			</button>
+		</form>
 	</div>
 </div>
 <?php

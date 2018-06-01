@@ -11,13 +11,13 @@
 
 	//Error handlers
 	//Check for empty fields
-	if(empty($_POST["item-name"]) || empty($_POST["item-price"]) || empty($_POST["item-description"])) {
+	if(empty($_POST["item-name"]) || empty($_POST["item-price"]) || empty($_POST["item-description"]) || empty($uploaded_photo)) {
 		header("Location: ../staff.php?item=empty");
 		exit();
 	} else {
-		$sql = "INSERT INTO food (name, price, description, item_type, product_image) VALUES (?, ?, ?, ?)";
+		$sql = "INSERT INTO food (name, price, description, item_type, product_image) VALUES (?, ?, ?, ?, ?)";
 		$dbrs = $dbConn->prepare($sql);
-		$dbrs->execute(array($_POST["item-name"],$_POST["item-price"],$_POST["item-description"],$_POST["item-type"], $_POST[$uploaded_photo]));
+		$dbrs->execute(array($_POST["item-name"],$_POST["item-price"],$_POST["item-description"],$_POST["item-type"], $uploaded_photo));
 		header("Location: ../add-item-successful.php");
 		exit();
 		} 

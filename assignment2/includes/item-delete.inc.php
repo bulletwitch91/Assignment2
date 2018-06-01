@@ -14,7 +14,7 @@
 		header("Location ../staff.php?delete=empty");
 		exit();
 	} else {
-		$sql = "DELETE FROM food WHERE name = ?";
+		$sql = "DELETE FROM food WHERE productID = ?";
 		$dbrs = $dbConn->prepare($sql);
 		$dbrs->execute(array($_POST["item-name-delete"]));
 		header("Location: ../delete-item-successful.php");

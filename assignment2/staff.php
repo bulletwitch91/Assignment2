@@ -31,7 +31,15 @@
 						$dbrs = $dbConn->prepare($sql);
 						$dbrs->execute(array($food_type));
 						foreach ($dbrs as $dbrow) {
-							echo "<tr><td>" . $dbrow['name'] . "</td><td>$" . $dbrow['price'] . "</td><td>" . $dbrow['description'] . "</td><td>" . "</tr>";
+							?>
+								<form action="includes/item-delete.inc.php" method="post">
+								<input type="hidden" name="item-name-delete" placeholder="Item Name" value="<?php echo $dbrow['productID']; ?>">
+							<?php
+							echo "<tr><td>" . $dbrow['name'] . "</td><td>$" . $dbrow['price'] . "</td><td>" . $dbrow['description'] . "</td>";
+							?>
+								<td><button type="submit" name="delete-item">Delete</button></td></tr>
+							</form>
+						<?php
 						}
 					}
 					if(isset($_POST['cold-food'])) {
@@ -40,7 +48,15 @@
 						$dbrs = $dbConn->prepare($sql);
 						$dbrs->execute(array($food_type));
 						foreach ($dbrs as $dbrow) {
-							echo "<tr><td>" . $dbrow['name'] . "</td><td>$" . $dbrow['price'] . "</td><td>" . $dbrow['description'] . "</td></tr>";
+							?>
+								<form action="includes/item-delete.inc.php" method="post">
+								<input type="hidden" name="item-name-delete" placeholder="Item Name" value="<?php echo $dbrow['productID']; ?>">
+							<?php
+							echo "<tr><td>" . $dbrow['name'] . "</td><td>$" . $dbrow['price'] . "</td><td>" . $dbrow['description'] . "</td>";
+							?>
+								<td><button type="submit" name="delete-item">Delete</button></td></tr>
+							</form>
+						<?php
 						}
 					}
 					if(isset($_POST['hot-drink'])) {
@@ -49,7 +65,15 @@
 						$dbrs = $dbConn->prepare($sql);
 						$dbrs->execute(array($food_type));
 						foreach ($dbrs as $dbrow) {
-							echo "<tr><td>" . $dbrow['name'] . "</td><td>$" . $dbrow['price'] . "</td><td>" . $dbrow['description'] . "</td></tr>";
+							?>
+								<form action="includes/item-delete.inc.php" method="post">
+								<input type="hidden" name="item-name-delete" placeholder="Item Name" value="<?php echo $dbrow['productID']; ?>">
+							<?php
+							echo "<tr><td>" . $dbrow['name'] . "</td><td>$" . $dbrow['price'] . "</td><td>" . $dbrow['description'] . "</td>";
+							?>
+								<td><button type="submit" name="delete-item">Delete</button></td></tr>
+							</form>
+						<?php
 						}
 					}	
 					if(isset($_POST['cold-drink'])) {
@@ -58,19 +82,28 @@
 						$dbrs = $dbConn->prepare($sql);
 						$dbrs->execute(array($food_type));
 						foreach ($dbrs as $dbrow) {
-							echo "<tr><td>" . $dbrow['name'] . "</td><td>$" . $dbrow['price'] . "</td><td>" . $dbrow['description'] . "</td></tr>";
+						?>
+							<form action="includes/item-delete.inc.php" method="post">
+								<input type="hidden" name="item-name-delete" placeholder="Item Name" value="<?php echo $dbrow['productID']; ?>">
+						<?php
+							echo "<tr><td>" . $dbrow['name'] . "</td><td>$" . $dbrow['price'] . "</td><td>" . $dbrow['description'] . "</td>";
+						?>
+
+								<td><button type="submit" name="delete-item">Delete</button></td></tr>
+							</form>
+						<?php
 						}
 					}
 				?></table>
 			</div>
-		<h1>Delete an item</h1>
+		<!-- <h1>Delete an item</h1>
 		<form action="includes/item-delete.inc.php" method="post">
 			<input type="text" name="item-name-delete" placeholder="Item Name">
 			<button type="submit" name="delete-item">Submit</button>
-		</form>
+		</form> -->
 		<h1>Add new item</h1>
 
-		<form action="includes/new-item.inc.php" method="post">
+		<form action="includes/new-item.inc.php" method="post" enctype="multipart/form-data">
 			<input type="text" name="item-name" placeholder="Item Name">
 			<input type="text" name="item-price" placeholder="Item Price">
 			<select name="item-type">
@@ -80,11 +113,8 @@
 				<option value="cold-drink">Cold Drink</option>
 			</select>
 			<br></br>
-			<form action="includes/new-item.inc.php" method="post" encrypt="multipart/form-data">
 			Select image to upload
-			<input type="file" name="FileToUpload">
-			<input type="submit" value="Upload Image" name="submit">
-			<br>
+			<input type="file" name="FileToUpload"><br>
 			<input type="text" name="item-description" placeholder="Item Description" maxlength="75"><br></br>
 			<button type="submit" name="new-item">Submit</button> 
 		</form>

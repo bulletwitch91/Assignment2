@@ -5,8 +5,8 @@ CREATE TABLE food(
 	name varchar(256) not null,
 	price decimal(11,2) not null,
 	description varchar(256) not null,
-	item_type varchar(256) not null
-	product_image BLOB, 
+	item_type varchar(256) not null,
+	product_image BLOB
 );
 
 CREATE TABLE user(
@@ -21,7 +21,7 @@ CREATE TABLE user(
 
 CREATE TABLE user_order(
 	order_id int(11) not null AUTO_INCREMENT PRIMARY KEY,
-	productID int(11)
+	productID int(11),
 	user_id int(11)
 );
 	
@@ -36,8 +36,8 @@ INSERT INTO food (name, price, description, item_type)
 	 ('Hot chocolate', '5', 'Hot chocolate with marshmellos', 'hot-drink'),
 	 ('Coffee', '5.50', 'Coffee made from the barista', 'hot-drink'),
 	 ('Tea', '4', 'Herbal tea', 'hot-drink'),
-	 ('Water', '4.50', 'Cold water', 'cold-drink');
-	 ('Powerade', '4.50', 'Red powerade', 'cold-drink');
+	 ('Water', '4.50', 'Cold water', 'cold-drink'),
+	 ('Powerade', '4.50', 'Red powerade', 'cold-drink'),
 	 ('Orange juice', '5', 'Orange juice', 'cold-drink');
 
 INSERT INTO user (user_first, user_last, user_email, user_username, user_password)

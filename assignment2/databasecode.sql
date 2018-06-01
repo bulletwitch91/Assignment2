@@ -19,6 +19,13 @@ CREATE TABLE user(
 	user_type varchar(256) DEFAULT 'student' not null
 );
 
+CREATE TABLE user_order(
+	order_id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+	productID int(11)
+	user_id int(11)
+);
+	
+	
 INSERT INTO food (name, price, description, item_type)
 	VALUES ('Burger', '7.50', 'Delicious Hamburger', 'hot-food'),
 	 ('Pizza', '12.50', 'Chicken Pizza', 'hot-food'),

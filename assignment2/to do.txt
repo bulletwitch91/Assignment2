@@ -1,0 +1,14 @@
+Important:
+Error pages
+Login styling
+Menu item SQL
+SQL injection
+Cart
+Email confirmation of order
+
+
+
+Other:
+Homepage
+Login page - admin page
+Additional styling
